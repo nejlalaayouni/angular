@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-       label "main"
-    }
+   
     stages {
         stage('Restore') {
             steps {

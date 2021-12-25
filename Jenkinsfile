@@ -11,11 +11,7 @@ pipeline {
                 sh 'npm run-script build'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'ng serve'
-            }
-        }        
+        
                 
     }
 }

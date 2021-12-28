@@ -1,12 +1,12 @@
 pipeline {
   agent any
-     tools {nodejs "Node-16.13"}
+
   
   stages {
         
     stage('Git') {
       steps {
-        git 'https://github.com/monadevOp/angular.git'
+        git 'https://github.com/nejlalaayouni/angular.git'
       }
     }
      

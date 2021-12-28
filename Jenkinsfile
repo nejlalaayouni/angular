@@ -25,7 +25,7 @@ pipeline {
     }
     stage('TEST') {
       steps {
-        sh 'curl -X POST http://127.0.0.1:4200'
+        sh 'ng serve POST http://127.0.0.1:4200'
       }
     }
   }

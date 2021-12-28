@@ -12,7 +12,7 @@ pipeline {
      
     stage('Build') {
       steps {
-        sh 'npm install npm@latest -g'
+        sh 'npm install '
          
       }
     }  

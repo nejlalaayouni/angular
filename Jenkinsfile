@@ -3,13 +3,10 @@ pipeline {
     
 
   stages {
-      stage('Checkout') {
+      stage('git') {
          steps {
-            echo 'Checkout main branch'
-            checkout scm
-            dir('angular') {
-               bat 'npm install'
-            }
+            git 'https://github.com/nejlalaayouni/angular.git'
+           
          }
       }
      

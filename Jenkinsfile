@@ -2,7 +2,7 @@ pipeline {
   agent any
     
   tools {nodejs "Node-16.13"}
-  
+    
   stages {
         
     stage('Git') {
@@ -11,25 +11,24 @@ pipeline {
       }
     }
      
-    stage('Install node modules'){
+    stage('Build') {
       steps {
-        sh 'npm install '
+        sh 'npm install'
          
       }
     }  
     
-  stage('Test'){
+    stage('Start') {
       steps {
-        sh 'npm run test-headless'
+        sh 'npm run'
       }
     }
-  stage('Build'){
+    stage('TEST') {
       steps {
-        sh 'npm run build --prod'
+        sh 'curl -X POST http://127.0.0.1:4200'
       }
     }
   }
   
 }
-
 

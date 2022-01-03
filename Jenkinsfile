@@ -10,7 +10,7 @@ pipeline {
       }
     }
      
-    stage('Install node modules')
+    stage('Install node modules'){
       steps {
         sh 'npm install '
          
@@ -30,4 +30,4 @@ pipeline {
   }
   
 }
-}
+

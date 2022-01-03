@@ -4,7 +4,7 @@ pipeline {
   
   stages {
         
-    stage('checkout SCM') {
+    stage('Git') {
       steps {
         git 'https://github.com/nejlalaayouni/angular.git'
       }

@@ -4,27 +4,27 @@ pipeline {
   
   stages {
         
-    stage('Git') {
+    stage('checkout SCM') {
       steps {
         git 'https://github.com/nejlalaayouni/angular.git'
       }
     }
      
-    stage('Build') {
+    stage('Install node modules')
       steps {
         sh 'npm install '
          
       }
     }  
     
-    stage('Start') {
+  stage('Test'){
       steps {
-        sh 'npm install -g @angular/cli'
+        sh 'npm run test-headless'
       }
     }
-    stage('TEST') {
+  stage('Build'){
       steps {
-        sh 'ng serve POST http://127.0.0.1:4200'
+        sh 'npm run build --prod'
       }
     }
   }
